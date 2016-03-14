@@ -1,1 +1,148 @@
 /* Empty. Add your own CSS if you like */
+/*ACCOUNT PAGE*/
+
+.account-top-section {
+    padding: 10px 10px 0 20px;
+}
+
+.avatar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 165px;
+    width:165px;
+    margin: 0;
+    padding: 10px;
+    background-color: #bfbfbf;
+    -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.username {
+    z-index: 1000;
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.account-info-buttons{
+    margin: 0;
+    padding: 0 0 0 25px;
+}
+
+.account-edit-info, .account-logout {
+    height: 30px;
+    margin: 11px 15px 0 0;
+}
+
+.account-header-info {
+    padding: 10px;
+}
+
+.rating-stars {
+    margin-left: 1px;
+}
+
+.rating-stars i {
+    font-size: 20px;
+    margin: 1px;
+}
+
+.rating-number {
+    padding: 0 0 0 10px;
+}
+
+.account-badges {
+    margin: 0 0 5px 0;
+}
+
+.account-badges .badge {
+    font-size: 25px;
+    display: inline-block;
+    padding: 4px 0;
+    margin-right: 5px;
+}
+
+.account-friend-badge {
+    font-size: 25px;
+    padding: 4px 0;
+}
+
+.info {
+    margin: 20px 20px 0 0;
+    padding: 10px;
+}
+
+.location h5{
+    margin: 5px;
+}
+
+.account-bottom-section {
+    padding: 0;
+}
+
+.account-grips-views-section{
+    background-color: #bfbfbf;
+}
+
+.account-grips-section {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+ .account-views-section {
+    margin-top: -20px;
+    padding: 0 10px;
+ }
+
+.grips-section-title, .views-section-title{
+    padding: 0 15px;
+}
+.account-upcoming-grips, .account-upcoming-views {
+    padding: 10px;
+}
+.upcoming-grip, .upcoming-view {
+    text-align: center;
+    display: inline-block;
+    width: 46%;
+    background-color: white;
+    padding: 20px 0 20px 0;
+    margin: 0 5px 15px 5px;
+}
+
+.upcoming-grip-buttons, .upcoming-view-buttons {
+    text-align: center;
+    display: inline-block;
+    width: 46%;
+    margin: 0 5px 15px 5px;
+}
+
+.upcoming-grip-buttons button, .upcoming-view-buttons button {
+    width: 100%;
+    padding: 5px auto;
+    margin: 0 5px 15px 5px;
+}
+
+.account-friends-section {
+    padding: 10px 20px;
+}
+
+.account-friend {
+    padding: 15px 0;
+    margin: 5px 0;
+}
+
+.account-friend-avatar {
+    width: 50px;
+    height:50px;
+    position: fixed;
+    background-color: #bfbfbf;
+    -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.account-friend-info {
+    display: inline-block;
+}
