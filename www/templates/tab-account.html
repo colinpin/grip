@@ -1,6 +1,6 @@
 <ion-view view-title="Account">
     <ion-content>
-        <div class="account-main container">
+        <div class="account-main container" ng-controller="AccountCtrl">
             <div class="account-top-section row">
                 <div class="col col-50">
                     <img class="avatar" src="{{user.avatar}}" />
@@ -14,7 +14,7 @@
                         <i class="col badge badge-about icon ion-help-circled"></i>
                     </div>
                     <div class="rating-stars row">
-                        <div class="col-60 row">
+                        <div class="rating-star-rating col-60 row">
                             <div class="star-1 col">
                                 <i class="icon ion-ios-star"></i>
                             </div>
@@ -32,21 +32,24 @@
                             </div>
                         </div>
                         <div class="rating-number col row">
-                            <h4>3.5</h4>
+                            <h4>{{user.rating}}</h4>
                         </div>
                     </div>
                     <div class="location">
-                        <h5>Kalamazoo, MD</h5>
-                        <h5>U.S.A.</h5>
+                        <h5>{{user.locationCity}}, {{user.locationState}}</h5>
+                        <h5>{{user.locationCountry}}</h5>
                     </div>
                 </div>
             </div>
             <div class="username row">
-                <h1 class="account-username col">@longish_username</h1>
+                <div class="col-80">
+                    <h1 class="account-username row">@{{user.username}}</h1>
+                    <p class="row">{{user.bio}}</p>
+                </div>
             </div>
             <div class="account-info-buttons">
-                <button class="account-edit-info button button-small button-clear button-stable" ng-click="">edit info</button>
-                <button class="account-logout button button-small button-clear button-stable" ng-click="">logout</button>
+                <button class="account-edit-info button button-small button-outline button-light" ng-click="">edit info</button>
+                <button class="account-logout button button-small button-clear button-assertive" ng-click="">logout</button>
             </div>
             <div class="account-bottom-section">
                 <div class="account-grips-views-section">
@@ -107,89 +110,35 @@
                 </div>
                 <div class="account-friends-section">
                     <h6>Friends</h6>
-                    <div class="account-friend row">
-                        <div class="account-friend-avatar col-20">
-                            <img src="" />
+                    <div class="account-friend row" ng-repeat="friend in user.friends">
+                        <div class="col">
+                            <img class="account-friend-avatar" src="{{friend.avatar}}" />
                         </div>
                         <div class="account-friend-info col-80 col-offset-20">
                             <div class="row">
-                                <h3 class="account-friend-username col-80">@friendship_xoxo</h3>
-                                <i class="account-friend-badge friend-badge-1 icon ion-happy col"></i>
-                                <i class="account-friend-badge friend-badge-2 icon ion-happy col"></i>
+                                <h3 class="account-friend-username col-80">{{friend.username}}</h3>
                             </div>
-                            <div class="col-33 row">
-                                <div class="account-friend-star-1 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-2 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-3 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-4 col">
-                                    <i class="icon ion-ios-star-half"></i>
-                                </div>
-                                <div class="account-friend-star-5 col">
-                                    <i class="icon ion-ios-star-outline"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account-friend row">
-                        <div class="account-friend-avatar col-20">
-                            <img src="" />
-                        </div>
-                        <div class="account-friend-info col-80 col-offset-20">
                             <div class="row">
-                                <h3 class="account-friend-username col-80">@friendship_xoxo</h3>
-                                <i class="account-friend-badge friend-badge-1 icon ion-happy col"></i>
-                                <i class="account-friend-badge friend-badge-2 icon ion-happy col"></i>
-                            </div>
-                            <div class="col-33 row">
-                                <div class="account-friend-star-1 col">
-                                    <i class="icon ion-ios-star"></i>
+                                <div class="rating-stars col-33 row">
+                                    <div class="account-friend-star-1 col">
+                                        <i class="icon ion-ios-star"></i>
+                                    </div>
+                                    <div class="account-friend-star-2 col">
+                                        <i class="icon ion-ios-star"></i>
+                                    </div>
+                                    <div class="account-friend-star-3 col">
+                                        <i class="icon ion-ios-star"></i>
+                                    </div>
+                                    <div class="account-friend-star-4 col">
+                                        <i class="icon ion-ios-star-half"></i>
+                                    </div>
+                                    <div class="account-friend-star-5 col">
+                                        <i class="icon ion-ios-star-outline"></i>
+                                    </div>
                                 </div>
-                                <div class="account-friend-star-2 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-3 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-4 col">
-                                    <i class="icon ion-ios-star-half"></i>
-                                </div>
-                                <div class="account-friend-star-5 col">
-                                    <i class="icon ion-ios-star-outline"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account-friend row">
-                        <div class="account-friend-avatar col-20">
-                            <img src="" />
-                        </div>
-                        <div class="account-friend-info col-80 col-offset-20">
-                            <div class="row">
-                                <h3 class="account-friend-username col-80">@friendship_xoxo</h3>
-                                <i class="account-friend-badge friend-badge-1 icon ion-happy col"></i>
-                                <i class="account-friend-badge friend-badge-2 icon ion-happy col"></i>
-                            </div>
-                            <div class="col-33 row">
-                                <div class="account-friend-star-1 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-2 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-3 col">
-                                    <i class="icon ion-ios-star"></i>
-                                </div>
-                                <div class="account-friend-star-4 col">
-                                    <i class="icon ion-ios-star-half"></i>
-                                </div>
-                                <div class="account-friend-star-5 col">
-                                    <i class="icon ion-ios-star-outline"></i>
+                                <div class="account-friend-badges col-66 row">
+                                        <i class="account-friend-badge friend-badge-1 icon ion-contrast"></i>
+                                        <i class="account-friend-badge friend-badge-2 icon ion-music-note"></i>
                                 </div>
                             </div>
                         </div>

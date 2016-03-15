@@ -12,7 +12,7 @@
     height: 165px;
     width:165px;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     background-color: #bfbfbf;
     -moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -28,12 +28,13 @@
 
 .account-info-buttons{
     margin: 0;
-    padding: 0 0 0 25px;
+    padding: 0 0 0 20px;
 }
 
 .account-edit-info, .account-logout {
     height: 30px;
-    margin: 11px 15px 0 0;
+    margin: 5px 5px 10px 0;
+    padding: 0 8px;
 }
 
 .account-header-info {
@@ -44,9 +45,14 @@
     margin-left: 1px;
 }
 
+.rating-star-rating {
+    margin-top: 6px;
+}
+
 .rating-stars i {
     font-size: 20px;
     margin: 1px;
+    color: #ffff00;
 }
 
 .rating-number {
@@ -54,7 +60,7 @@
 }
 
 .account-badges {
-    margin: 0 0 5px 0;
+    margin: 0 0 5px 3px;
 }
 
 .account-badges .badge {
@@ -64,9 +70,22 @@
     margin-right: 5px;
 }
 
+.badge-1, .badge-2, .badge-3, .badge-4, .friend-badge-1, .friend-badge-2 {
+    color: #E6279A;
+}
+
+.badge-about{
+    color: #bfbfbf;
+}
+
+.account-friend-badges {
+    padding-left: 10px;
+}
+
 .account-friend-badge {
-    font-size: 25px;
-    padding: 4px 0;
+    font-size: 15px;
+    padding: 4px 5px;
+    display: inline;
 }
 
 .info {
@@ -135,7 +154,7 @@
 
 .account-friend-avatar {
     width: 50px;
-    height:50px;
+    height: 50px;
     position: fixed;
     background-color: #bfbfbf;
     -moz-border-radius: 50%;
