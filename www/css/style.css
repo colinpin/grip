@@ -1,1 +1,14 @@
 /* Empty. Add your own CSS if you like */
+.test-login{
+    text-align: center;
+    color: green !important;
+    margin: 10%;
+  
+}
+
+.loginButtons{
+    text-align: center;
+    margin-top: 70%;
+     
+    
+}
