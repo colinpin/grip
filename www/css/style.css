@@ -1,5 +1,4 @@
 /* Empty. Add your own CSS if you like */
-<<<<<<< HEAD
 .test-login{
     text-align: center;
     color: green !important;
@@ -10,10 +9,9 @@
 .loginButtons{
     text-align: center;
     margin-top: 70%;
-     
-    
-=======
-/*ACCOUNT PAGE*/
+}
+
+/*—————ACCOUNT PAGE—————*/
 
 .account-top-section {
     padding: 10px 10px 0 20px;
@@ -194,5 +192,4 @@
 
 .account-friend-info {
     display: inline-block;
->>>>>>> origin/master
 }
