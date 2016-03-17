@@ -45,9 +45,9 @@
     padding: 0 0 0 20px;
 }
 
-.account-edit-info, .account-logout {
+.account-edit-info, .account-logout, .grips-browse-all, .views-browse-all {
     height: 30px;
-    margin: 5px 5px 10px 0;
+    margin: 2px 5px 10px 0;
     padding: 0 8px;
 }
 
@@ -135,21 +135,37 @@
 .account-upcoming-grips, .account-upcoming-views {
     padding: 10px;
 }
+
+.account-grips-views-section .row{
+  flex-wrap: wrap;
+}
+
 .upcoming-grip, .upcoming-view {
     text-align: center;
     display: inline-block;
-    width: 46%;
-    background-color: white;
-    padding: 20px 0 20px 0;
-    margin: 0 5px 15px 5px;
+    padding: 0;
 }
 
-.upcoming-grip-buttons, .upcoming-view-buttons {
-    text-align: center;
-    display: inline-block;
-    width: 46%;
-    margin: 0 5px 15px 5px;
+.upcoming-grip-thumbnail, .upcoming-view-thumbnail {
+    width: 100%;
+    z-index: -1;
+    height: 100px;
 }
+
+.upcoming-grip-text {
+    position: relative;
+    top: -105px;
+    left: 0;
+    width: 100%;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.2); 
+    padding: 7px;
+}
+
+/*.upcoming-grip-buttons, .upcoming-view-buttons {
+    height: 100px;
+    width: 100%;
+}*/
 
 .upcoming-grip-buttons button, .upcoming-view-buttons button {
     width: 100%;

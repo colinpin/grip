@@ -43,6 +43,30 @@ angular.module('starter.controllers', [])
                 }
             ],
             rating: 3.5,
+            grips: [
+                {
+                    title: "MoMA Show",
+                    locationCity: "New York City",
+                    locationState: "NY",
+                    locationCountry: "U.S.A.",
+                    date: new Date(),
+                    image: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                    tags: ["Art", "Music", "Basquiat"],
+                    gripper: "@username",
+                    viewers: "Archie"
+                },
+                {
+                    title: "MoMA Show",
+                    locationCity: "New York City",
+                    locationState: "NY",
+                    locationCountry: "U.S.A.",
+                    date: new Date(),
+                    image: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                    tags: ["Art", "Music", "Basquiat"],
+                    gripper: "@username",
+                    viewers: "Archie"
+                },
+            ],
             friends: [
                 {
                     username: "boat_junk_boat",
@@ -71,7 +95,7 @@ angular.module('starter.controllers', [])
                         }],
                     rating: 3.5,
                     avatar: "https://s-media-cache-ak0.pinimg.com/564x/8c/34/0f/8c340f41fc179452186fe68fea721849.jpg"
-                },
+                }
             ]
         };
     })

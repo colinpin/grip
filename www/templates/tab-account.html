@@ -53,57 +53,36 @@
             </div>
             <div class="account-bottom-section">
                 <div class="account-grips-views-section">
-                    <div class="account-grips-section">
+                    <div class="account-grips-section row">
                         <h6 class="grips-section-title">Upcoming Grips</h6>
-                        <div class="account-upcoming-grips">
-                            <div class="upcoming-grip">
-                                <img class="upcoming-grip-thumbnail" src="" />
-                                <h5>MoMA Opening</h5>
-                                <p>3-04-2016</p>
+                        <button class="grips-browse-all button button-small button-outline button-dark col-offset-90">Browse All</button>
+                        <div class="row">
+                            <div class="account-upcoming-grips col-50" ng-repeat="grip in user.grips">
+                                <div class="upcoming-grip">
+                                    <img class="upcoming-grip-thumbnail" src="{{grip.image}}" />
+                                    <div class="upcoming-grip-text">
+                                        <h5>{{grip.title}}</h5>
+                                        <p>{{grip.date}}</p>
+                                    </div>
+                                </div>
                             </div>
-
-                            <!--<div class="upcoming-grip">
-                                <img class="upcoming-grip-thumbnail" src="" />
-                                <h5>MoMA Opening</h5>
-                                <p>3-04-2016</p>
-                            </div>
-
-                            <div class="upcoming-grip">
-                                <img class="upcoming-grip-thumbnail" src="" />
-                                <h5>MoMA Opening</h5>
-                                <p>3-04-2016</p>
-                            </div>-->
-
-                            <div class="upcoming-grip-buttons">
-                                <button class="button button-small button-outline button-dark">Browse Grips</button>
-                                <button class="button button-small button-outline button-dark">Create Grip</button>
-                            </div>
+                            <button class="grips-create-new button button-small button-outline button-dark col-50">Create Grip</button>
                         </div>
                     </div>
                     <div class="account-views-section">
                         <h6 class="views-section-title">Upcoming Views</h6>
                         <div class="account-upcoming-views">
-                            <div class="upcoming-view col-50">
-                                <img class="upcoming-view-thumbnail" src="" />
-                                <h5>MoMA Opening</h5>
-                                <p>3-04-2016</p>
-                            </div>
+                            <div class="row">
+                                <div class="upcoming-view col-50">
+                                    <img class="upcoming-view-thumbnail" src="" />
+                                    <h5>MoMA Opening</h5>
+                                    <p>3-04-2016</p>
+                                </div>
 
-                            <div class="upcoming-view col-50">
-                                <img class="upcoming-view-thumbnail" src="" />
-                                <h5>MoMA Opening</h5>
-                                <p>3-04-2016</p>
-                            </div>
-
-                            <div class="upcoming-view col-50">
-                                <img class="upcoming-view-thumbnail" src="" />
-                                <h5>MoMA Opening</h5>
-                                <p>3-04-2016</p>
-                            </div>
-
-                            <div class="upcoming-view-buttons col-50">
-                                <button class="button button-small button-outline button-dark">Browse Views</button>
-                                <button class="button button-small button-outline button-dark">Request a View</button>
+                                <div class="upcoming-view-buttons col-50">
+                                    <button class="button button-small button-outline button-dark">Browse Views</button>
+                                    <button class="button button-small button-outline button-dark">Request a View</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -137,8 +116,8 @@
                                     </div>
                                 </div>
                                 <div class="account-friend-badges col-66 row">
-                                        <i class="account-friend-badge friend-badge-1 icon ion-contrast"></i>
-                                        <i class="account-friend-badge friend-badge-2 icon ion-music-note"></i>
+                                    <i class="account-friend-badge friend-badge-1 icon ion-contrast"></i>
+                                    <i class="account-friend-badge friend-badge-2 icon ion-music-note"></i>
                                 </div>
                             </div>
                         </div>
