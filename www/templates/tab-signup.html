@@ -2,42 +2,32 @@
     <ion-content>
         <!--INSERT HTML HERE FOR LOGIN PAGE-->
 
+        <div class="signup-container" ng-controller="signupCtrl">
+            <div class="test-login">
+                <h1>Account Signup</h1>
+            </div>
 
-        <div class="test-login">
-            <h1>Account Sign-Up</h1>
-        </div>
-
-
-        <div class="list">
-            <label class="item item-input">
-                <input type="text" placeholder="First Name">
-            </label>
-            <br/>
-            <label class="item item-input">
-                <input type="text" placeholder="Last Name">
-            </label>
-            <br/>
-            <label class="item item-input">
-                <input type="text" placeholder="User Name">
-            </label>
-            <br/>
-            <label class="item item-input">
-                <input type="text" placeholder="Password">
-            </label>
-            <br/>
-            <label class="item item-input">
-                <input type="text" placeholder="Re-enter Password">
-            </label>
-            <br/>
-            <label class="item item-input">
-                <input type="text" placeholder="Email Address">
-            </label>
-        </div>
-        <br/>
-        <div>
-            <button class="button button-large button-dark signUp-btn">
-                Sign-Up
-            </button>
+            <form class="list" ng-submit="addUser()">
+                <label class="item item-input">
+                    <input type="text" placeholder="First Name" ng-model="newUserFirstName">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Last Name" ng-model="newUserLastName">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="User Name" ng-model="newUserUsername">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Password" ng-model="newUserPassword">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Re-enter Password" ng-model="newUserPasswordConfirm">
+                </label>
+                <label class="item item-input">
+                    <input class="item item-input" type="text" placeholder="Email Address" ng-model="newUserEmail">
+                </label>
+                <button type="submit" class="button button-dark signUp-btn">Sign Up!</button>
+            </form>
         </div>
     </ion-content>
 </ion-view>

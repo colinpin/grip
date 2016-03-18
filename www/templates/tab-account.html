@@ -2,13 +2,12 @@
     <ion-content>
         <div class="account-main container" ng-controller="AccountCtrl">
             <div class="account-top-section row">
-                <div class="col col-50">
-                    <img class="avatar" src="{{user.avatar}}" />
+                <div class="col col-60">
+                    <div class="avatar" style="background-image:url({{user.avatar}})"></div>
                 </div>
-                <div class="account-header-info col col-50">
+                <div class="account-header-info col col-40">
                     <div class="account-badges row">
                         <i class="col badge badge-1 icon ion-videocamera"></i>
-                        <i class="col badge badge-2 icon ion-playstation"></i>
                         <i class="col badge badge-3 icon ion-map"></i>
                         <i class="col badge badge-4 icon ion-ios-mic"></i>
                         <i class="col badge badge-about icon ion-help-circled"></i>
@@ -31,9 +30,9 @@
                                 <i class="icon ion-ios-star-outline"></i>
                             </div>
                         </div>
-                        <div class="rating-number col row">
+                        <!--<div class="rating-number col row">
                             <h4>{{user.rating}}</h4>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="location">
                         <h5>{{user.locationCity}}, {{user.locationState}}</h5>
@@ -42,8 +41,9 @@
                 </div>
             </div>
             <div class="username row">
-                <div class="col-80">
-                    <h1 class="account-username row">@{{user.username}}</h1>
+                <div class="col-90">
+                    <h1 class="account-username row">@{{user.username | uppercase}}</h1>
+                    <p class="row"><strong>{{user.firstName}} {{user.lastName}}</strong></p>
                     <p class="row">{{user.bio}}</p>
                 </div>
             </div>
@@ -55,34 +55,43 @@
                 <div class="account-grips-views-section">
                     <div class="account-grips-section row">
                         <h6 class="grips-section-title">Upcoming Grips</h6>
-                        <button class="grips-browse-all button button-small button-outline button-dark col-offset-90">Browse All</button>
+                        <div class="col text-right">
+                            <button class="grips-browse-all button button-small button-outline button-dark col-offset-90">Browse</button>
+                        </div>
                         <div class="row">
                             <div class="account-upcoming-grips col-50" ng-repeat="grip in user.grips">
                                 <div class="upcoming-grip">
-                                    <img class="upcoming-grip-thumbnail" src="{{grip.image}}" />
+                                    <div class="upcoming-grip-thumbnail" style="background-image:url({{grip.image}})"></div>
                                     <div class="upcoming-grip-text">
                                         <h5>{{grip.title}}</h5>
-                                        <p>{{grip.date}}</p>
+                                        <!--<p>{{grip.date}}</p>-->
                                     </div>
                                 </div>
                             </div>
-                            <button class="grips-create-new button button-small button-outline button-dark col-50">Create Grip</button>
+                            <div class="grips-create-new col-50">
+                                <i class="icon ion-ios-plus-outline"></i>
+                                <p>New Grip</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="account-views-section">
+                    <div class="account-views-section row">
                         <h6 class="views-section-title">Upcoming Views</h6>
-                        <div class="account-upcoming-views">
-                            <div class="row">
-                                <div class="upcoming-view col-50">
-                                    <img class="upcoming-view-thumbnail" src="" />
-                                    <h5>MoMA Opening</h5>
-                                    <p>3-04-2016</p>
+                        <div class="col text-right">
+                            <button class="views-browse-all button button-small button-outline button-dark col-offset-90">Browse</button>
+                        </div>
+                        <div class="row">
+                            <div class="account-upcoming-views col-50" ng-repeat="view in user.views">
+                                <div class="upcoming-view">
+                                    <div class="upcoming-view-thumbnail" style="background-image:url({{view.image}})"></div>
+                                    <div class="upcoming-view-text">
+                                        <h5>{{view.title}}</h5>
+                                        <!--<p>{{view.date}}</p>-->
+                                    </div>
                                 </div>
-
-                                <div class="upcoming-view-buttons col-50">
-                                    <button class="button button-small button-outline button-dark">Browse Views</button>
-                                    <button class="button button-small button-outline button-dark">Request a View</button>
-                                </div>
+                            </div>
+                            <div class="grips-create-new col-50">
+                                <i class="icon ion-ios-plus-outline"></i>
+                                <p>New View</p>
                             </div>
                         </div>
                     </div>
@@ -91,7 +100,7 @@
                     <h6>Friends</h6>
                     <div class="account-friend row" ng-repeat="friend in user.friends">
                         <div class="col">
-                            <img class="account-friend-avatar" src="{{friend.avatar}}" />
+                            <div class="account-friend-avatar" style="background-image:url({{friend.avatar}})" ></div>
                         </div>
                         <div class="account-friend-info col-80 col-offset-20">
                             <div class="row">

@@ -2,27 +2,38 @@
 .test-login{
     text-align: center;
     color: green !important;
-    margin: 10%;
-  
+    margin: 10%; 
 }
 
-.loginButtons{
+.signup-container {
+    margin: 20px;
+}
+
+.signup-container label {
+    margin: 10px 0;
+}
+
+.signUp-btn{
     text-align: center;
-    margin-top: 70%;
+    margin-top: 10px;
 }
 
 /*—————ACCOUNT PAGE—————*/
 
 .account-top-section {
-    padding: 10px 10px 0 20px;
+    padding: 10px 5px 0 20px;
+    margin: 0px 0 60px 0;
 }
 
 .avatar {
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
     position: fixed;
     top: 20px;
     left: 20px;
-    height: 165px;
-    width:165px;
+    height: 215px;
+    width: 215px;
     margin: 0;
     padding: 0;
     background-color: #bfbfbf;
@@ -83,7 +94,7 @@
 }
 
 .badge-1, .badge-2, .badge-3, .badge-4, .friend-badge-1, .friend-badge-2 {
-    color: #E6279A;
+    color: #0000ff;
 }
 
 .badge-about{
@@ -114,56 +125,76 @@
 }
 
 .account-grips-views-section{
-    background-color: #bfbfbf;
-}
-
-.account-grips-section {
-    margin-top: 10px;
-    padding: 10px;
-}
-
- .account-views-section {
-    margin-top: -20px;
-    padding: 0 10px;
- }
-
-.grips-section-title, .views-section-title{
-    padding: 0 15px;
-}
-.account-upcoming-grips, .account-upcoming-views {
-    padding: 10px;
+    background-color: #f0f0f0;
 }
 
 .account-grips-views-section .row{
   flex-wrap: wrap;
 }
 
+.account-grips-section {
+    margin: 10px 0 20px 0;
+    padding-top: 20px;
+}
+
+.grips-section-title, .views-section-title{
+    padding: 0 15px;
+}
+
+.account-upcoming-grips, .account-upcoming-views {
+    padding: 0;
+}
+
 .upcoming-grip, .upcoming-view {
+    position: relative;
     text-align: center;
     display: inline-block;
     padding: 0;
+    width: 100%;
+}
+
+.grips-create-new, .views-create-new {
+    height: 120px;
+    border-radius: 2px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 35px 0 0 0;
+    width: 100%;
+    color: #0000ff;
+}
+
+.grips-create-new i {
+    font-size: 30px;
 }
 
 .upcoming-grip-thumbnail, .upcoming-view-thumbnail {
     width: 100%;
     z-index: -1;
-    height: 100px;
+    height: 120px;
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
 }
 
-.upcoming-grip-text {
-    position: relative;
-    top: -105px;
-    left: 0;
-    width: 100%;
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.2); 
-    padding: 7px;
+.upcoming-grip-text, .upcoming-view-text {
+    background: rgb(0, 0, 255); /* fallback color */
+    background: rgba(0, 0, 255, 0.8); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
 /*.upcoming-grip-buttons, .upcoming-view-buttons {
     height: 100px;
     width: 100%;
 }*/
+
+.grips-browse-all, .views-browse-all {
+    margin-right: 15px;
+}
 
 .upcoming-grip-buttons button, .upcoming-view-buttons button {
     width: 100%;
@@ -188,6 +219,9 @@
     -moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
     border-radius: 50%;
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
 }
 
 .account-friend-info {
