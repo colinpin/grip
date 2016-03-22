@@ -87,6 +87,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+   .state('tab.community', {
+    url: '/community',
+    views: {
+      'tab-community': {
+        templateUrl: 'templates/tab-community.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
   .state('tab.signup', {
     url: '/signup',
     views: {

@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 .test-login{
     text-align: center;
-    color: green !important;
+    color: #0000ff;
     margin: 10%; 
 }
 
@@ -21,19 +21,19 @@
 /*—————ACCOUNT PAGE—————*/
 
 .account-top-section {
-    padding: 10px 5px 0 20px;
-    margin: 0px 0 60px 0;
+    padding: 0px 5px 0 20px;
+    margin: 0px 0 115px 0;
 }
 
-.avatar {
+.account-avatar {
     display: inline-block;
     background-position: center center;
     background-size: cover;
     position: fixed;
-    top: 20px;
-    left: 20px;
-    height: 215px;
-    width: 215px;
+    top: 10px;
+    left: 10px;
+    height: 225px;
+    width: 225px;
     margin: 0;
     padding: 0;
     background-color: #bfbfbf;
@@ -41,6 +41,13 @@
 	-webkit-border-radius: 50%;
     border-radius: 50%;
     z-index: -1;
+}
+
+.account-big-request-button {
+    border-radius: 50%;
+    padding: 8px 0 5px 1px;
+    margin: 30px 0 0 20px;
+    font-size: 30px;
 }
 
 .username {

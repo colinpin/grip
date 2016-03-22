@@ -3,53 +3,32 @@
         <div class="account-main container" ng-controller="AccountCtrl">
             <div class="account-top-section row">
                 <div class="col col-60">
-                    <div class="avatar" style="background-image:url({{user.avatar}})"></div>
+                    <div class="follow-button"></div>
+                    <div class="account-avatar" style="background-image:url({{user.avatar}})"></div>
                 </div>
-                <div class="account-header-info col col-40">
-                    <div class="account-badges row">
-                        <i class="col badge badge-1 icon ion-videocamera"></i>
-                        <i class="col badge badge-3 icon ion-map"></i>
-                        <i class="col badge badge-4 icon ion-ios-mic"></i>
-                        <i class="col badge badge-about icon ion-help-circled"></i>
-                    </div>
-                    <div class="rating-stars row">
-                        <div class="rating-star-rating col-60 row">
-                            <div class="star-1 col">
-                                <i class="icon ion-ios-star"></i>
-                            </div>
-                            <div class="star-2 col">
-                                <i class="icon ion-ios-star"></i>
-                            </div>
-                            <div class="star-3 col">
-                                <i class="icon ion-ios-star"></i>
-                            </div>
-                            <div class="star-4 col">
-                                <i class="icon ion-ios-star-half"></i>
-                            </div>
-                            <div class="star-5 col">
-                                <i class="icon ion-ios-star-outline"></i>
-                            </div>
-                        </div>
-                        <!--<div class="rating-number col row">
-                            <h4>{{user.rating}}</h4>
-                        </div>-->
-                    </div>
-                    <div class="location">
-                        <h5>{{user.locationCity}}, {{user.locationState}}</h5>
-                        <h5>{{user.locationCountry}}</h5>
-                    </div>
+                <div class="col-40">
+                    <button class="account-big-request-button button button-large button-outline button-dark"><i class="ion-ios-videocam-outline"></i></button>
                 </div>
             </div>
             <div class="username row">
                 <div class="col-90">
                     <h1 class="account-username row">@{{user.username | uppercase}}</h1>
-                    <p class="row"><strong>{{user.firstName}} {{user.lastName}}</strong></p>
+                    <div class="row">
+                        <h5 class="col-75"><strong>{{user.firstName}} {{user.lastName}}</strong></h5>
+                        <div class="col">
+                            <div class="account-badges row">
+                                <i class="col-33 badge badge-1 icon ion-videocamera"></i>
+                                <i class="col-33 badge badge-3 icon ion-map"></i>
+                                <i class="col-33 badge badge-4 icon ion-ios-mic"></i>
+                            </div>
+                        </div>
+                    </div>
                     <p class="row">{{user.bio}}</p>
                 </div>
             </div>
             <div class="account-info-buttons">
-                <button class="account-edit-info button button-small button-outline button-light" ng-click="">edit info</button>
-                <button class="account-logout button button-small button-clear button-assertive" ng-click="">logout</button>
+                <button class="account-edit-info button button-small button-outline button-dark" ng-click=""><i class="icon ion-ios-help-outline"></i> Request</button>
+                <button class="account-logout button button-small button-outline button-dark" ng-click=""><i class="icon ion-ios-plus-outline"></i> Follow</button>
             </div>
             <div class="account-bottom-section">
                 <div class="account-grips-views-section">
@@ -100,7 +79,7 @@
                     <h6>Friends</h6>
                     <div class="account-friend row" ng-repeat="friend in user.friends">
                         <div class="col">
-                            <div class="account-friend-avatar" style="background-image:url({{friend.avatar}})" ></div>
+                            <div class="account-friend-avatar" style="background-image:url({{friend.avatar}})"></div>
                         </div>
                         <div class="account-friend-info col-80 col-offset-20">
                             <div class="row">
