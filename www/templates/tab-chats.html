@@ -1,17 +1,42 @@
-<ion-view view-title="Chats">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+<ion-view view-title="Community">
+    <ion-content>
+        <div class="community-container" ng-controller="communityCtrl">
+            <div class="open-grips">
+                <div class="grip-card-and-button">
+                    <div class="grip-card">
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+                        <div class="grip-card-header row">
+                            <div class="grip-card-askers-avatars col-20">
+                                <div class="grip-card-asker-avatar one" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/98/71/36/9871369b80e5c8e5bbc1a98280a1e43c.jpg)"></div>
+                                <div class="grip-card-asker-avatar two" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/2c/2b/82/2c2b82776c40397c785a412abc8cfd40.jpg)"></div>
+                                <div class="grip-card-asker-avatar three" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/90/f8/10/90f81086209550d10f3b1ff61cbcb810.jpg)"></div>
+                            </div>
+                            <div class="grip-card-askers-details col">
+                                <h1 class="grip-card-points row">801</h1>
+                                <h6 class="grip-card-askers-usernames">@colinflower, @see_pep & <a href="">798 more</a> want a grip</h6>
+                            </div>
+                            <div class="grip-card-type-icon" style="background-image:url({{friend.avatar}})"></div>
+                        </div>
+                        <div class="grip-card-askee row">
+                            <div class="grip-card-askee-avatar col-10" style="background-image:url(http://seeklogo.com/images/M/mcdonald-s-logo-1E9F99D2ED-seeklogo.com.gif)"></div>
+                            <div class="grip-card-askee-name col-30">
+                                <h5>McDonald's</h5>
+                            </div>
+                        </div>
+                        <div class="grip-card-question">
+                            <h2>How do you make a chicken McNugget?</h2>
+                        </div>
+                        <a href="">
+                            <p>more info</p>
+                        </a>
+
+                    </div>
+                    <div class="grip-card-button col-40">
+                        <button class="grip-card-big-request-button button button-large button-positive">+1</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
-
