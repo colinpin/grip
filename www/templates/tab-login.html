@@ -2,18 +2,18 @@
     <ion-content>
         <!--INSERT HTML HERE FOR LOGIN PAGE-->
 
-
-        <div class="test-login">
-            <h1>grip</h1>
-        </div>
-        <div class="loginButtons">
-            <button class="button button-large button-dark login-btn">
-                Login
-            </button>
-            <button class="button button-large button-dark signUp-btn">
-                Sign-Up
-            </button>
-
+        <div class="login-container" ng-controller="loginCtrl">
+            <h1>log in to grip</h1>
+            <div class="login-input-form">
+                <form class="list" ng-submit="loginUser()">
+                    <input type="text" placeholder="email" ng-model="userEmail">
+                    <input type="password" placeholder="password" ng-model="userPassword">
+                    <div class="loginButtons row">
+                        <button class="button button-large button-dark col">Login</button>
+                        <button class="button button-large button-dark col">Sign-Up</button>
+                    </div>
+                </form>
+            </div>
         </div>
 
 

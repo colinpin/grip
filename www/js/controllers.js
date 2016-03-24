@@ -177,23 +177,37 @@ angular.module('starter.controllers', [])
 
     .controller("signupCtrl", function($scope, $firebaseArray) {
         var ref = new Firebase("https://grip.firebaseio.com/users");
-        $scope.users = $firebaseArray(ref);
-        // add new items to the array
-        // the user is automatically added to our Firebase database!
         $scope.addUser = function() {
-           
-            if ($scope.newUserPassword === $scope.newUserPasswordConfirm) {
-                $scope.users.$add({
-                    firstName: $scope.newUserFirstName,
-                    lastName: $scope.newUserLastName,
-                    username: $scope.newUserUsername,
-                    avatar: "https://s-media-cache-ak0.pinimg.com/564x/a1/b6/38/a1b638245c1e90e9d578ff18fc19f03a.jpg",
-                    email: $scope.newUserEmail,
-                    password: $scope.newUserPassword
-                });
-            } else {
-                alert("Passwords do not match!")
-            }
-        };
+            ref.createUser({
+                firstName: $scope.newUserFirstName,
+                lastName: $scope.newUserLastName,
+                username: $scope.newUserUsername,
+                avatar: "https://s-media-cache-ak0.pinimg.com/564x/a1/b6/38/a1b638245c1e90e9d578ff18fc19f03a.jpg",
+                email: $scope.newUserEmail,
+                password: $scope.newUserPassword
+            }, function(error, userData) {
+                if (error) {
+                    console.log("Error creating user:", error);
+                } else {
+                    console.log("Successfully created user account with uid:", userData.uid);
+                }
+            });
+        }
+
     })
 
+    .controller("loginCtrl", function($scope, $firebaseArray) {
+        var ref = new Firebase("https://grip.firebaseio.com/users");
+        $scope.loginUser = function() {
+            ref.authWithPassword({
+                email: $scope.userEmail,
+                password: $scope.userPassword
+            }, function(error, authData) {
+                if (error) {
+                    console.log("Login Failed!", error);
+                } else {
+                    console.log("Authenticated successfully with payload:", authData);
+                }
+            });
+        }
+    })
