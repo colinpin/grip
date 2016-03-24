@@ -1,10 +1,9 @@
-<ion-view view-title="login">
+<ion-view view-title="Account Signup">
     <ion-content>
         <!--INSERT HTML HERE FOR LOGIN PAGE-->
 
         <div class="signup-container" ng-controller="signupCtrl">
             <div class="test-login">
-                <h1>Account Signup</h1>
             </div>
 
             <form class="list" ng-submit="addUser()">
@@ -26,7 +25,9 @@
                 <label class="item item-input">
                     <input class="item item-input" type="text" placeholder="Email Address" ng-model="newUserEmail">
                 </label>
-                <button type="submit" class="button button-dark signUp-btn">Sign Up!</button>
+                
+                <!--Sign up needs to have validation attached to it.-->
+                <button type="submit" class="button button-dark signUp-btn button-block">Sign Up!</button>
             </form>
         </div>
     </ion-content>
