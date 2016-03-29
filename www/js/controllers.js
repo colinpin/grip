@@ -5,8 +5,9 @@ angular.module('starter.controllers', [])
 
     .controller('AccountCtrl', function($scope) {
         //$scope.newUser = [];
+        $scope.loggedIn = "http://grip.firebaseio.com/users/" + ""
         $scope.user = {
-            ID: "01234567890",
+            ID: "",
             firstName: "Chauncey",
             lastName: "Peppertooth",
             username: "see_pepper",
@@ -90,6 +91,7 @@ angular.module('starter.controllers', [])
             friends: [
                 {
                     username: "boat_junk_boat",
+                    name: "Garth Longtorso",
                     friendBadges: [
                         {
                             name: "Whatever",
@@ -104,6 +106,7 @@ angular.module('starter.controllers', [])
                 },
                 {
                     username: "charliez_angles",
+                    name: "Garth Longtorso",
                     badges: [
                         {
                             name: "Doesn't Matter",
@@ -118,6 +121,7 @@ angular.module('starter.controllers', [])
                 },
                 {
                     username: "boat_junk_boat",
+                    name: "Garth Longtorso",
                     friendBadges: [
                         {
                             name: "Whatever",
@@ -132,6 +136,7 @@ angular.module('starter.controllers', [])
                 },
                 {
                     username: "charliez_angles",
+                    name: "Garth Longtorso",
                     badges: [
                         {
                             name: "Doesn't Matter",
@@ -193,6 +198,7 @@ angular.module('starter.controllers', [])
                 }
             });
         }
+       
 
     })
 

@@ -3,7 +3,6 @@
         <div class="community-container" ng-controller="communityCtrl">
             <div class="open-grips">
                 <div class="grip-card card">
-
                     <div class="grip-card-header row">
                         <div class="grip-card-askers-avatars col">
                             <div class="grip-card-asker-avatar" style="background-image:url({{friend.avatar}})"></div>
@@ -29,10 +28,38 @@
                     <div class="col-40">
                         <button class="account-big-request-button button button-large button-outline button-dark"><i class="ion-ios-videocam-outline"></i></button>
                     </div>
-
                 </div>
-
             </div>
+            <div class="friends-grips">
+                <div class="grip-card card">
+                    <div class="grip-card-header row">
+                        <div class="grip-card-askers-avatars col">
+                            <div class="grip-card-asker-avatar" style="background-image:url({{friend.avatar}})"></div>
+                            <div class="grip-card-asker-avatar" style="background-image:url({{friend.avatar}})"></div>
+                            <div class="grip-card-asker-avatar" style="background-image:url({{friend.avatar}})"></div>
+                        </div>
+                        <div class="grip-card-askers-details col">
+                            <h1 class="grip-card-points row">800</h1>
+                            <h6 class="grip-card-askers-usernames">@colinflower, @see_pep, @banana, & <a href="">1,000 more</a> want a grip</h6>
+                        </div>
+                        <div class="grip-card-type-icon" style="background-image:url({{friend.avatar}})"></div>
+                    </div>
+                    <div class="grip-card-askee row">
+                        <div class="grip-card-askee-avatar col-10" style="background-image:url({{friend.avatar}})"></div>
+                        <div class="grip-card-askee-name col-30">
+                            <h5>McDonald's</h5>
+                        </div>
+                    </div>
+                    <h1>How do you make a chicken McNugget?</h1>
+                    <a href="">
+                        <p>more info</p>
+                    </a>
+                    <div class="col-40">
+                        <button class="account-big-request-button button button-large button-outline button-dark"><i class="ion-ios-videocam-outline"></i></button>
+                    </div>
+                </div>
+            </div>
+               
         </div>
         </div>
     </ion-content>
