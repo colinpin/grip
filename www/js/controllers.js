@@ -180,9 +180,9 @@ angular.module('starter.controllers', [])
         ]
     })
 
-    .controller("signupCtrl", function($scope, $firebaseArray) {
-        var ref = new Firebase("https://grip.firebaseio.com/users");
+    .controller("signupCtrl", function($scope, $firebaseArray, $firebaseAuth) {
         $scope.addUser = function() {
+            var ref = new Firebase("https://grip.firebaseio.com/users");
             ref.createUser({
                 firstName: $scope.newUserFirstName,
                 lastName: $scope.newUserLastName,
@@ -195,10 +195,21 @@ angular.module('starter.controllers', [])
                     console.log("Error creating user:", error);
                 } else {
                     console.log("Successfully created user account with uid:", userData.uid);
+                    var ref = new Firebase("https://grip.firebaseio.com/users");
+                    var users = $firebaseArray(ref);
+                    users.$add({
+                        uid: userData.uid,
+                        firstName: $scope.newUserFirstName,
+                        lastName: $scope.newUserLastName,
+                        username: $scope.newUserUsername,
+                        avatar: "https://s-media-cache-ak0.pinimg.com/564x/a1/b6/38/a1b638245c1e90e9d578ff18fc19f03a.jpg",
+                        email: $scope.newUserEmail,
+                        password: $scope.newUserPassword
+                    })
                 }
             });
         }
-       
+
 
     })
 
