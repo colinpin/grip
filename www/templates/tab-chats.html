@@ -1,40 +1,81 @@
-<ion-view view-title="Community">
-    <ion-content>
-        <div class="community-container" ng-controller="communityCtrl">
-            <div class="open-grips">
-                <div class="grip-card-and-button">
-                    <div class="grip-card">
+<ion-header-bar class="bar-positive">
+    <button class="icon ion-navicon button button-clear"></button>
+    <!--Go To Home, Stream, Community, -->
 
-                        <div class="grip-card-header row">
-                            <div class="grip-card-askers-avatars col-20">
-                                <div class="grip-card-asker-avatar one" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/98/71/36/9871369b80e5c8e5bbc1a98280a1e43c.jpg)"></div>
-                                <div class="grip-card-asker-avatar two" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/2c/2b/82/2c2b82776c40397c785a412abc8cfd40.jpg)"></div>
-                                <div class="grip-card-asker-avatar three" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/90/f8/10/90f81086209550d10f3b1ff61cbcb810.jpg)"></div>
-                            </div>
-                            <div class="grip-card-askers-details col">
-                                <h1 class="grip-card-points row">801</h1>
-                                <h6 class="grip-card-askers-usernames">@colinflower, @see_pep & <a href="">798 more</a> want a grip</h6>
-                            </div>
+    <h1 class="title">Account</h1>
+</ion-header-bar>
+<ion-view view-title="Chats">
+    <ion-content>
+        <div class="community-container" ng-controller="gripsCtrl">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="Search">
+                </label>
+            </div>
+            <div class="open-grips">
+                <h6>Open Grips</h6>
+                <div class="grip-card-and-button" style="margin-left:{{randomMargin}}px">
+                    <div class="grip-card">
+                        <div class="grip-card-header">
+
                             <div class="grip-card-type-icon" style="background-image:url({{friend.avatar}})"></div>
                         </div>
                         <div class="grip-card-askee row">
-                            <div class="grip-card-askee-avatar col-10" style="background-image:url(http://vignette4.wikia.nocookie.net/logopedia/images/5/5c/McDonald's_Philippines_logo_2011.svg)"></div>
-                            <div class="grip-card-askee-name col-30">
-                                <h5>McDonald's</h5>
+                            <div class="col-50">
+                                <div class="row">
+                                    <div class="grip-card-askee-avatar col-20" style="background-image:url(http://vignette4.wikia.nocookie.net/logopedia/images/5/5c/McDonald's_Philippines_logo_2011.svg)"></div>
+                                    <div class="grip-card-askee-name col">
+                                        <h5>McDonald's</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <div class="grip-card-question">
                             <h2>How do you make a chicken McNugget?</h2>
                         </div>
-                        <a href="">
-                            <p>more info</p>
-                        </a>
+                        <div class="grip-card-askers-details">
+                            <h1 class="grip-card-points row">8,901 <span><h6>Votes</h6></h1>
+                        </div>
 
                     </div>
-                    <div class="grip-card-button col-40">
-                        <button class="grip-card-big-request-button button button-large button-positive">+1</button>
+                    <div class="grip-card-button col">
+                        <button class="grip-card-big-request-button button button-outline button-positive">+1</button>
                     </div>
                 </div>
+                <div class="grip-card-and-button">
+                    <div class="grip-card">
+                        <div class="grip-card-header">
+
+                            <div class="grip-card-type-icon" style="background-image:url({{friend.avatar}})"></div>
+                        </div>
+                        <div class="grip-card-askee row">
+                            <div class="col-50">
+                                <div class="row">
+                                    <div class="grip-card-askee-avatar col-20" style="background-image:url(http://vignette4.wikia.nocookie.net/logopedia/images/5/5c/McDonald's_Philippines_logo_2011.svg)"></div>
+                                    <div class="grip-card-askee-name col">
+                                        <h5>McDonald's</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grip-card-question">
+                            <h2>How do you make a chicken McNugget?</h2>
+                        </div>
+                        <div class="grip-card-askers-details">
+                            <h1 class="grip-card-points row">8,901 <span><h6>Votes</h6></h1>
+                        </div>
+
+                    </div>
+                    <div class="grip-card-button col">
+                        <button class="grip-card-big-request-button button button-outline button-positive">+1</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="closed-grips">
 
             </div>
         </div>

@@ -4,7 +4,16 @@ angular.module('starter.controllers', [])
 
 
     .controller('AccountCtrl', function($scope) {
-        //$scope.newUser = [];
+        $scope.requestGrip = function() {
+            addGrip(users.users)
+        }
+
+        randomMargin = function(min, max) {
+            min = 4;
+            max = 40;
+            return Math.floor(Math.random() * (max - min + 4) + min);
+        }
+
         $scope.loggedIn = "http://grip.firebaseio.com/users/" + ""
         $scope.user = {
             ID: "",
@@ -31,38 +40,54 @@ angular.module('starter.controllers', [])
             rating: 3.5,
             grips: [
                 {
-                    title: "MoMA Show Opening",
-                    locationCity: "New York City",
-                    locationState: "NY",
-                    locationCountry: "U.S.A.",
+                    gripId: "789879879879879",
+                    title: "How do you make a chicken Nugget?",
+                    location: "New York City",
                     date: new Date(),
-                    image: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
-                    tags: ["Art", "Music", "Basquiat"],
-                    gripper: "@username",
-                    viewers: "Archie"
+                    deadline: "01.01.2017",
+                    gripThumbnail: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                    gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
+                    type: "unique",
+                    requestUid: "9872398742938749",
+                    requestUsername: "McDonalds",
+                    griprequestedBy: "ferg",
+                    requests: "Colin, Bill, Joe",
+                    points: 8901,
+                    margin: randomMargin()
                 },
                 {
-                    title: "People Arguing at Restaurant",
-                    locationCity: "New York City",
-                    locationState: "NY",
-                    locationCountry: "U.S.A.",
+                    gripId: "789879879879879",
+                    title: "How do you make a chicken Nugget?",
+                    location: "New York City",
                     date: new Date(),
-                    image: "http://images.teamsugar.com/files/upl0/0/3362/02_2008/AA032434.preview.jpg",
-                    tags: ["Art", "Music", "Basquiat"],
-                    gripper: "@username",
-                    viewers: "Archie"
+                    deadline: "01.01.2017",
+                    gripThumbnail: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                    gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
+                    type: "unique",
+                    requestUid: "9872398742938749",
+                    requestUsername: "McDonalds",
+                    griprequestedBy: "ferg",
+                    requests: "Colin, Bill, Joe",
+                    points: 8901,
+                    margin: randomMargin()
                 },
                 {
-                    title: "Lionel Messi",
-                    locationCity: "Barcelona",
-                    locationState: "",
-                    locationCountry: "Spain",
+                    gripId: "789879879879879",
+                    title: "How do you make a chicken Nugget?",
+                    location: "New York City",
                     date: new Date(),
-                    image: "http://i.telegraph.co.uk/multimedia/archive/03054/messi1_3054545b.jpg",
-                    tags: ["Sports", "Soccer", "Messi"],
-                    gripper: "@username",
-                    viewers: "Archie"
-                },
+                    deadline: "01.01.2017",
+                    gripThumbnail: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                    gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
+                    type: "unique",
+                    requestUid: "9872398742938749",
+                    requestUsername: "McDonalds",
+                    griprequestedBy: "ferg",
+                    requests: "Colin, Bill, Joe",
+                    points: 8901,
+                    margin: randomMargin()
+                }
+
             ],
             views: [
                 {
@@ -88,96 +113,37 @@ angular.module('starter.controllers', [])
                     viewers: "Archie"
                 },
             ],
-            friends: [
-                {
-                    username: "boat_junk_boat",
-                    name: "Garth Longtorso",
-                    friendBadges: [
-                        {
-                            name: "Whatever",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        },
-                        {
-                            name: "100Grips",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        }],
-                    rating: 3.5,
-                    avatar: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg"
-                },
-                {
-                    username: "charliez_angles",
-                    name: "Garth Longtorso",
-                    badges: [
-                        {
-                            name: "Doesn't Matter",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        },
-                        {
-                            name: "Some other stuff",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        }],
-                    rating: 3.5,
-                    avatar: "https://s-media-cache-ak0.pinimg.com/564x/8c/34/0f/8c340f41fc179452186fe68fea721849.jpg"
-                },
-                {
-                    username: "boat_junk_boat",
-                    name: "Garth Longtorso",
-                    friendBadges: [
-                        {
-                            name: "Whatever",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        },
-                        {
-                            name: "100Grips",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        }],
-                    rating: 3.5,
-                    avatar: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg"
-                },
-                {
-                    username: "charliez_angles",
-                    name: "Garth Longtorso",
-                    badges: [
-                        {
-                            name: "Doesn't Matter",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        },
-                        {
-                            name: "Some other stuff",
-                            image: "http://www.bandanaworld.com/20108.JPG"
-                        }],
-                    rating: 3.5,
-                    avatar: "https://s-media-cache-ak0.pinimg.com/564x/8c/34/0f/8c340f41fc179452186fe68fea721849.jpg"
-                }
-            ]
+            following: []
         };
     })
 
-    .controller('GripsCtrl', function($scope) {
+    .controller('gripsCtrl', function($scope) {
         $scope.grips = [
             {
-                title: "MoMA Show",
-                locationCity: "New York City",
-                locationState: "NY",
-                locationCountry: "U.S.A.",
+                gripId: "789879879879879",
+                title: "How do you make a chicken Nugget?",
+                location: "New York City",
                 date: new Date(),
-                image: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
-                tags: ["Art", "Music", "Basquiat"],
-                gripper: [user],
-                viewers: []
-            },
-            {
-                title: "MoMA Show",
-                locationCity: "New York City",
-                locationState: "NY",
-                locationCountry: "U.S.A.",
-                date: new Date(),
-                image: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
-                tags: ["Art", "Music", "Basquiat"],
-                gripper: [user],
-                viewers: []
-            },
-        ]
+                deadline: "01.01.2017",
+                gripThumbnail: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
+                type: "unique",
+                requestUid: "9872398742938749",
+                requestUsername: "McDonalds",
+                griprequestedBy: "ferg",
+                requests: "Colin, Bill, Joe",
+                points: 8901,
+                margin: randomMargin()
+            }
+
+        ];
+
+        $scope.randomMargin = function(min, max) {
+            min = 5;
+            max = 50;
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
     })
 
     .controller("signupCtrl", function($scope, $firebaseArray, $firebaseAuth) {
@@ -228,3 +194,36 @@ angular.module('starter.controllers', [])
             });
         }
     })
+
+// .controller('gripsCtrl', function($scope, $ionicPopup, $timeout) {
+
+//     $scope.gripPopup = function() {
+//         $scope.data = {};
+//         var gripPopup = $ionicPopup.show({
+//             templateUrl: 'create-grip.html'
+//         });
+//     }
+// });
+
+var uid = "";
+var loggedIn = {
+    username: users.uid.username,
+    avatar: users.uid.avatar,
+    following: [],
+    grips: []
+}
+var addGrip = function(uid, user) {
+    var ref = new Firebase("https://grip.firebaseio.com/grips");
+    var grip = $firebaseArray(ref);
+    grips.$addGrip({
+        gripId: gripId,
+        title: $scope.newGripTitle,
+        type: $scope.newUserLastName,
+        requestUid: user,
+        requestedBy: uid,
+        requests: [],
+        thumbnail: "https://s-media-cache-ak0.pinimg.com/564x/a1/b6/38/a1b638245c1e90e9d578ff18fc19f03a.jpg"
+    })
+}
+
+

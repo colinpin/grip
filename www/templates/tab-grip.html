@@ -1,0 +1,24 @@
+<form class="list" ng-submit="addGrip()">
+    <h2>Request a grip from {{user}}</h2>
+    <label class="item item-input">
+        <input type="text" placeholder="User" ng-model="newGripTitle">
+    </label>
+    <div class="row">
+        <p>Who can Grip this?</p>
+        <ion-list>
+            <ion-radio ng-model="choice" ng-value="'A'">Anyone</ion-radio>
+            <ion-radio ng-model="choice" ng-value="'B'">Just McDonalds</ion-radio>
+        </ion-list>
+    </div>
+    <label class="item item-input">
+        <input type="text" placeholder="Title" ng-model="newGripTitle">
+    </label>
+    <label class="item item-input">
+        <input type="text" placeholder="Location (if any)" ng-model="newGripLocation">
+    </label>
+    <label class="item item-input">
+        <input type="date" placeholder="Deadline" ng-model="newGripDeadline">
+    </label>
+
+    <button type="submit" class="button button-dark signUp-btn button-block">Request this Grip</button>
+</form>

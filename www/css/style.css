@@ -5,6 +5,17 @@
     margin: 10%; 
 }
 
+.login-container {
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    top: 375px;
+}
+
+.login-buttons {
+    margin: 30px 0 0 0;
+}
+
 .signup-container {
     margin: 20px;
 }
@@ -225,7 +236,7 @@
 
 
 
-.account-friend-avatar, .grip-card-asker-avatar {
+.account-friend-avatar {
     width: 50px;
     height: 50px;
     position: fixed;
@@ -246,38 +257,59 @@
 
 .community-container {
     padding-top: 48px;
-    background-color: #bfbfbf;
+    background-color: #f0f0f0;
     height: 100%;
 }
 
 .grip-card-and-button {
     position: relative;
+    margin-top: 5px; 
+    margin-right: 10px;
+    margin-bottom: 35px;
+    width: 330px;
 }
+
 
 .grip-card {
     padding: 10px;
-    margin: 5px 10px 5px 30px;
     z-index: 0;
     background-color: #ffffff;
+    border-radius: 4px;
+    background-color: #ff00a6;
+    background-image: url("http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg");
+    background-blend-mode: screen;
+}
+
+.grip-card-asker-avatar {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    background-color: #bfbfbf;
+    -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
 }
 
 .grip-card-askers-avatars .one{
-    margin-left: -30px;
+    margin-left: 0;
     z-index: 3;
 }
 
 .grip-card-askers-avatars .two{
-    margin-left: -20px;
+    margin-left: 10px;
     z-index: 2;
 }
 
 .grip-card-askers-avatars .three{
-    margin-left: -10px;
+    margin-left: 20px;
     z-index: 1;
 }
 
 .grip-card-askee-avatar {
-    width: 20px;
+    width: 30px;
     height: 30px;
     background-color: #bfbfbf;
     -moz-border-radius: 50%;
@@ -292,29 +324,33 @@
 
 
 .grip-card-askers-details {
-    margin: 0 0 20px 0;
+    margin: 0 0 2px 5px;
 }
 
 .grip-card-askers-details h1 {
-    margin: -8px;
+    margin: -7px;
+    font-size: 50px;
+    position: absolute;
+    top: 143px;
+    color: #0000ff;
 }
 
 .grip-card-askers-details h6 {
-    font-size: 11px;
-    margin: 10px 3px 0 -4px;
+    font-size: 12px;
+    padding:3px 0 0 5px;
 }
 
 .grip-card-question {
-    margin-top: 10px;
+    margin: 10px 0 34px 0;
 }
 
 .grip-card-big-request-button {
     position: absolute;
-    bottom: -24px;
-    right: 20px; 
+    bottom: -25px;
+    right: 10px; 
     z-index: 4;
     border-radius: 50%;
-    padding: 5px 0px 8px 0px;
+    padding: 5px 10px 8px 10px;
     margin: 0;
     font-size: 30px;
 }
