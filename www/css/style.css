@@ -119,10 +119,6 @@
     color: #bfbfbf;
 }
 
-.account-friend-badges {
-    padding: 0 0 0 10px;
-}
-
 .account-friend-badge {
     font-size: 15px;
     padding: 4px 5px;
@@ -221,7 +217,7 @@
 }
 
 .account-friends-section {
-    padding: 10px 20px;
+    padding: 10px 15px;
 }
 
 .account-friend {
@@ -247,6 +243,7 @@
     display: inline-block;
     background-position: center center;
     background-size: cover;
+    margin-top: 3px;
 }
 
 .account-friend-info {
@@ -265,7 +262,7 @@
     position: relative;
     margin-top: 5px; 
     margin-right: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     width: 330px;
 }
 
@@ -350,7 +347,7 @@
     right: 10px; 
     z-index: 4;
     border-radius: 50%;
-    padding: 5px 10px 8px 10px;
+    padding: 5px 10px 3px 10px;
     margin: 0;
     font-size: 30px;
 }

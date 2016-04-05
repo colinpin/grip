@@ -45,13 +45,12 @@ angular.module('starter.controllers', [])
                     location: "New York City",
                     date: new Date(),
                     deadline: "01.01.2017",
-                    gripThumbnail: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
                     gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
                     type: "unique",
                     requestUid: "9872398742938749",
+                    requestAvatar: "https://pbs.twimg.com/profile_images/658746945565954048/Zrf2h3RD_400x400.jpg",
                     requestUsername: "McDonalds",
                     griprequestedBy: "ferg",
-                    requests: "Colin, Bill, Joe",
                     points: 8901,
                     margin: randomMargin()
                 },
@@ -65,9 +64,9 @@ angular.module('starter.controllers', [])
                     gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
                     type: "unique",
                     requestUid: "9872398742938749",
+                    requestAvatar: "https://pbs.twimg.com/profile_images/658746945565954048/Zrf2h3RD_400x400.jpg",
                     requestUsername: "McDonalds",
                     griprequestedBy: "ferg",
-                    requests: "Colin, Bill, Joe",
                     points: 8901,
                     margin: randomMargin()
                 },
@@ -81,9 +80,9 @@ angular.module('starter.controllers', [])
                     gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
                     type: "unique",
                     requestUid: "9872398742938749",
+                    requestAvatar: "https://pbs.twimg.com/profile_images/658746945565954048/Zrf2h3RD_400x400.jpg",
                     requestUsername: "McDonalds",
                     griprequestedBy: "ferg",
-                    requests: "Colin, Bill, Joe",
                     points: 8901,
                     margin: randomMargin()
                 }
@@ -91,29 +90,45 @@ angular.module('starter.controllers', [])
             ],
             views: [
                 {
-                    title: "MoMA Show",
-                    locationCity: "New York City",
-                    locationState: "NY",
-                    locationCountry: "U.S.A.",
+                    gripId: "789879879879879",
+                    title: "How do you make a chicken Nugget?",
+                    location: "New York City",
                     date: new Date(),
-                    image: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
-                    tags: ["Art", "Music", "Basquiat"],
-                    gripper: "@username",
-                    viewers: "Archie"
+                    deadline: "01.01.2017",
+                    gripThumbnail: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                    gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
+                    type: "unique",
+                    requestUid: "9872398742938749",
+                    requestAvatar: "https://pbs.twimg.com/profile_images/658746945565954048/Zrf2h3RD_400x400.jpg",
+                    requestUsername: "McDonalds",
+                    griprequestedBy: "ferg",
+                    points: 8901,
+                    margin: randomMargin()
                 },
                 {
-                    title: "MoMA Show",
-                    locationCity: "New York City",
-                    locationState: "NY",
-                    locationCountry: "U.S.A.",
+                    gripId: "789879879879879",
+                    title: "How do you make a chicken Nugget?",
+                    location: "New York City",
                     date: new Date(),
-                    image: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
-                    tags: ["Art", "Music", "Basquiat"],
-                    gripper: "@username",
-                    viewers: "Archie"
-                },
+                    deadline: "01.01.2017",
+                    gripThumbnail: "https://lh5.googleusercontent.com/-aiYNuzS3sQ0/AAAAAAAAAAI/AAAAAAAAAGw/U_s11kAXvXY/s0-c-k-no-ns/photo.jpg",
+                    gripBackground: "http://i.kinja-img.com/gawker-media/image/upload/s--BXgpHA6o--/c_scale,fl_progressive,q_80,w_800/189s4c133ujf0jpg.jpg",
+                    type: "unique",
+                    requestUid: "9872398742938749",
+                    requestAvatar: "https://pbs.twimg.com/profile_images/658746945565954048/Zrf2h3RD_400x400.jpg",
+                    requestUsername: "McDonalds",
+                    griprequestedBy: "ferg",
+                    points: 8901,
+                    margin: randomMargin()
+                }
             ],
-            following: []
+            following: [{
+                
+                name: "Bart Simpson",
+                username: "bartman",
+                avatar: "https://static.simpsonswiki.com/images/thumb/f/f0/Butterfinger_-_Bart_Simpson_promotional_image.jpg/300px-Butterfinger_-_Bart_Simpson_promotional_image.jpg"
+            }
+            ]
         };
     })
 
@@ -194,24 +209,7 @@ angular.module('starter.controllers', [])
             });
         }
     })
-
-// .controller('gripsCtrl', function($scope, $ionicPopup, $timeout) {
-
-//     $scope.gripPopup = function() {
-//         $scope.data = {};
-//         var gripPopup = $ionicPopup.show({
-//             templateUrl: 'create-grip.html'
-//         });
-//     }
-// });
-
-var uid = "";
-var loggedIn = {
-    username: users.uid.username,
-    avatar: users.uid.avatar,
-    following: [],
-    grips: []
-}
+//save it to local storage when they login and remove when they logout
 var addGrip = function(uid, user) {
     var ref = new Firebase("https://grip.firebaseio.com/grips");
     var grip = $firebaseArray(ref);

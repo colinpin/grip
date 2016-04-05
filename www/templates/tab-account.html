@@ -55,7 +55,7 @@
                                     <div class="grip-card-askee row">
                                         <div class="col-50">
                                             <div class="row">
-                                                <div class="grip-card-askee-avatar col-20" style="background-image:url(http://vignette4.wikia.nocookie.net/logopedia/images/5/5c/McDonald's_Philippines_logo_2011.svg)"></div>
+                                                <div class="grip-card-askee-avatar col-20" style="background-image:url({{grip.requestAvatar}})"></div>
                                                 <div class="grip-card-askee-name col">
                                                     <h5>{{grip.requestUsername}}</h5>
                                                 </div>
@@ -67,70 +67,38 @@
                                         <h2>{{grip.title}}</h2>
                                     </div>
                                     <div class="grip-card-askers-details">
-                                        <h1 class="grip-card-points row">{{points}} <span><h6>Votes</h6></h1></span>
+                                        <h1 class="grip-card-points row">{{grip.points}} <span><h6>Votes</h6></h1></span>
                                     </div>
 
                                 </div>
                                 <div class="grip-card-button col">
-                                    <button class="grip-card-big-request-button button button-outline button-positive">+1</button>
+                                    <button class="grip-card-big-request-button button button-outline button-positive"><span class="ion-ios-videocam"></span></button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="account-views-section row">
-                            <h6 class="views-section-title">Requests</h6>
-                            <div class="col text-right">
-                                <button class="views-browse-all button button-small button-outline button-dark col-offset-90">Browse</button>
-                            </div>
-                            <div class="grip-card-and-button" style="margin-left:{{randomMargin}}px">
-                                <div class="grip-card">
-                                    <div class="grip-card-header">
-
-                                        <div class="grip-card-type-icon" style="background-image:url({{friend.avatar}})"></div>
-                                    </div>
-                                    <div class="grip-card-askee row">
-                                        <div class="col-50">
-                                            <div class="row">
-                                                <div class="grip-card-askee-avatar col-20" style="background-image:url(http://vignette4.wikia.nocookie.net/logopedia/images/5/5c/McDonald's_Philippines_logo_2011.svg)"></div>
-                                                <div class="grip-card-askee-name col">
-                                                    <h5>McDonald's</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="grip-card-question">
-                                        <h2>How do you make a chicken McNugget?</h2>
-                                    </div>
-                                    <div class="grip-card-askers-details">
-                                        <h1 class="grip-card-points row">8,901 <span><h6>Votes</h6></h1>
-                                    </div>
-
-                                </div>
-                                <div class="grip-card-button col">
-                                    <button class="grip-card-big-request-button button button-outline button-positive">+1</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="account-friends-section">
-                        <h6>Following</h6>
-                        <div class="account-friend row" ng-repeat="friend in user.friends">
-                            <div class="col">
-                                <div class="account-friend-avatar" style="background-image:url({{friend.avatar}})"></div>
-                            </div>
-                            <div class="account-friend-info col-80 col-offset-20">
-                                <div class="row">
-                                    <h3 class="account-friend-username col-80">{{friend.username}}</h3>
-                                    <div class="account-friend-badges col-20 row">
-                                        <i class="account-friend-badge friend-badge-1 icon ion-contrast"></i>
-                                        <i class="account-friend-badge friend-badge-2 icon ion-music-note"></i>
-                                    </div>
-                                </div>
-                                <h6 class="col-80">{{friend.name}}</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="account-friends-section">
+            <h6>Following</h6>
+            <div class="account-friend row" ng-repeat="user in user.following">
+                <div class="col">
+                    <div class="account-friend-avatar" style="background-image:url({{user.avatar}})"></div>
+                </div>
+                <div class="account-friend-info col-80 col-offset-20">
+                    <div class="row">
+                        <h3 class="account-friend-username col-80">{{user.username}}</h3>
+                        <div class="account-friend-badges col-20 row">
+                            <i class="account-friend-badge friend-badge-1 icon ion-contrast"></i>
+                            <i class="account-friend-badge friend-badge-2 icon ion-music-note"></i>
+                        </div>
+                    </div>
+                    <h6 class="col-80">{{user.name}}</h6>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
     </ion-content>
 </ion-view>
